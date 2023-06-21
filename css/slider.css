@@ -1,0 +1,151 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    /*-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;*/
+    box-sizing: border-box;
+}
+
+
+
+.navegacion{
+    width: 100%;
+    height: 70%;
+    margin: 30px auto;
+    background: rgba(52, 124, 23, 0.6);
+
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{
+   /*position: relative;*/
+   display: inline-block;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color: #254117;
+    font-family: cursive;
+    text-decoration: none;
+    font-size:25px;
+}
+
+.menu li a:hover{
+    background-color: rgba(156, 204, 101, 0.8);
+    transition: all .3s;
+    
+}
+.contenedor-slider img{
+
+    width: 100%;
+
+   
+}
+
+.miSlider{
+    display: none;
+
+}
+
+img{
+    /*vertical-align: middle;*/
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+
+/*para el DIV principal o contenedor*/
+.contenedor-slider{
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+
+/*Codigo para las flechitas*/
+.anterior, .siguiente{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 10px 10px 0;
+    background-color:#000090;
+}
+
+.siguiente{
+
+    right: 0;
+    border-radius: 10px 5px 5px 10px;
+
+}
+
+.anterior:hover, .siguiente:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*Codigo para los titulos de las imagenes*/
+/*.titulo{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 15px;
+    padding: 8px 12px;
+
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}*/
+
+.numero_texto{
+    color: #f2f2f2;
+    font: small-caps 20px serif;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.puntito{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color #000000 0.6s;
+
+}
+
+.activo, .puntito:hover{
+    background-color: #000090;;
+}
+
+.desvanecido{
+    -webkit-animation-name: desvanecido;
+    -webkit-animation-duration: 1.5s;
+    animation-name: desvanecido;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes desvanecido{
+    from{opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes desvanecido{
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px){
+    .anterior, .siguiente, .titulo {font-size: 11px}
+}
